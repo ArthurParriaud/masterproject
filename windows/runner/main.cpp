@@ -26,10 +26,15 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
 
   FlutterWindow window(project);
   Win32Window::Point origin(10, 10);
-  Win32Window::Size size(1280, 720);
+  Win32Window::Size size(600, 600);
   if (!window.Create(L"masterprojectfront", origin, size)) {
     return EXIT_FAILURE;
   }
+
+  HWND hwnd = window.GetHandle();
+
+  SetWindowLong(hwnd, GWL_STYLE, GetWindowLong(hwnd, GWL_STYLE) & ~WS_SIZEBOX & ~WS_MAXIMIZEBOX);
+
   window.SetQuitOnClose(true);
 
   ::MSG msg;
