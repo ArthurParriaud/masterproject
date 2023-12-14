@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
 
-class LimitSetter extends StatefulWidget{
+class MyTextField extends StatefulWidget{
 
   final TextEditingController textEditingController;
   final bool hasError;
-  final String hintText;
+  final String? hintText;
+  final bool? passwordField;
 
-  const LimitSetter({
+  const MyTextField({
     super.key,
     required this.textEditingController,
-    required this.hintText,
-    required this.hasError
+    this.hintText,
+    required this.hasError,
+    this.passwordField
   });
 
   @override
-  State<LimitSetter> createState() => LimitSetterState();
+  State<MyTextField> createState() => MyTextFieldState();
 
 }
 
-class LimitSetterState extends State<LimitSetter>{
+class MyTextFieldState extends State<MyTextField>{
 
   @override
   Widget build(BuildContext context){
@@ -41,8 +43,9 @@ class LimitSetterState extends State<LimitSetter>{
             widget.textEditingController.text = value;
             widget.textEditingController.selection = TextSelection.fromPosition(TextPosition(offset: cursorPos));
           },
+          obscureText: widget.passwordField ?? false,
           decoration: InputDecoration(
-              hintText: widget.hintText,
+              hintText: widget.hintText ?? "",
               border: InputBorder.none,
               focusedBorder: InputBorder.none,
               focusedErrorBorder: InputBorder.none
