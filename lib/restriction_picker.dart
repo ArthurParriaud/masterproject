@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:masterprojectfront/button_widget.dart';
-import 'package:masterprojectfront/limit_setter_widget.dart';
+import 'package:masterprojectfront/my_text_field.dart';
 
 class RestrictionPicker extends StatefulWidget {
 
@@ -59,7 +59,7 @@ class RestrictionPickerState extends State<RestrictionPicker>{
                 SizedBox(width: MediaQuery.of(context).size.width*0.05),
                 SizedBox(
                   width: MediaQuery.of(context).size.width*0.5,
-                  child: LimitSetter(textEditingController: caloriesLimiterText, hintText: "cal", hasError: caloriesHasError),
+                  child: MyTextField(textEditingController: caloriesLimiterText, hintText: "cal", hasError: caloriesHasError),
                 )
               ],
             ),
@@ -71,7 +71,7 @@ class RestrictionPickerState extends State<RestrictionPicker>{
                 SizedBox(width: MediaQuery.of(context).size.width*0.05),
                 SizedBox(
                   width: MediaQuery.of(context).size.width*0.5,
-                  child: LimitSetter(textEditingController: fatLimiterText, hintText: "g", hasError: fatHasError),
+                  child: MyTextField(textEditingController: fatLimiterText, hintText: "g", hasError: fatHasError),
                 )
               ],
             ),
@@ -83,7 +83,7 @@ class RestrictionPickerState extends State<RestrictionPicker>{
                 SizedBox(width: MediaQuery.of(context).size.width*0.05),
                 SizedBox(
                   width: MediaQuery.of(context).size.width*0.5,
-                  child: LimitSetter(textEditingController: sodiumLimiterText, hintText: "mg", hasError: sodiumHasError),
+                  child: MyTextField(textEditingController: sodiumLimiterText, hintText: "mg", hasError: sodiumHasError),
                 )
               ],
             ),
@@ -95,7 +95,7 @@ class RestrictionPickerState extends State<RestrictionPicker>{
                 SizedBox(width: MediaQuery.of(context).size.width*0.05),
                 SizedBox(
                   width: MediaQuery.of(context).size.width*0.5,
-                  child: LimitSetter(textEditingController: sugarsLimiterText, hintText: "g", hasError: sugarsHasError),
+                  child: MyTextField(textEditingController: sugarsLimiterText, hintText: "g", hasError: sugarsHasError),
                 )
               ],
             ),
@@ -107,7 +107,7 @@ class RestrictionPickerState extends State<RestrictionPicker>{
                 SizedBox(width: MediaQuery.of(context).size.width*0.05),
                 SizedBox(
                   width: MediaQuery.of(context).size.width*0.5,
-                  child: LimitSetter(textEditingController: proteinLimiterText, hintText: "g", hasError: proteinHasError),
+                  child: MyTextField(textEditingController: proteinLimiterText, hintText: "g", hasError: proteinHasError),
                 )
               ],
             ),
