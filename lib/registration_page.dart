@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:masterprojectfront/button_widget.dart';
+import 'package:masterprojectfront/recipe_style_page.dart';
 
 import 'my_text_field.dart';
 
@@ -165,7 +166,10 @@ class RegistrationPageState extends State<RegistrationPage>{
                   });
                 }
               } else {
-                print("c'est ok !");
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const RecipeStylePage())
+                );
               }
 
             })

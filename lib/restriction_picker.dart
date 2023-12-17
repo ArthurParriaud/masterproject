@@ -115,7 +115,7 @@ class RestrictionPickerState extends State<RestrictionPicker>{
             SizedBox(
               width: MediaQuery.of(context).size.width*0.3,
               child: MyTextButton(
-                  text: "Search Recipes",
+                  text: "Set restrictions",
                   onPressed: () async {
                     setState((){
 
@@ -162,7 +162,7 @@ class RestrictionPickerState extends State<RestrictionPicker>{
                         });
                       }
                     } else {
-                      print("All is Right !");
+                      Navigator.pop(context);
                     }
                   }
               ),
